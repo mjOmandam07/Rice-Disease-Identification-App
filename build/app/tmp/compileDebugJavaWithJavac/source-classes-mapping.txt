@@ -1,0 +1,4 @@
+io/flutter/plugins/GeneratedPluginRegistrant.java
+ io.flutter.plugins.GeneratedPluginRegistrant
+markrafjoe/com/rice_disease_detection/BuildConfig.java
+ markrafjoe.com.rice_disease_detection.BuildConfig

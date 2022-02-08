@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "artifactType": {
+    "type": "COMPATIBLE_SCREEN_MANIFEST",
+    "kind": "Directory"
+  },
+  "applicationId": "markrafjoe.com.rice_disease_detection",
+  "variantName": "debug",
+  "elements": []
+}
