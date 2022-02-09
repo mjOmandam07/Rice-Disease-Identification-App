@@ -80,6 +80,8 @@ class _homeState extends State<home> {
                           width: 180,
                           child: ElevatedButton(
                               onPressed: (){
+                                print('to scan');
+                                Navigator.pushNamed(context, '/scan');
                               },
                               style: ElevatedButton.styleFrom(
                                 primary: Colors.white,
