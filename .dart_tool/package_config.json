@@ -50,6 +50,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "crypto",
+      "rootUri": "file:///C:/Users/Mark%20Joshua/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/crypto-3.0.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "cupertino_icons",
       "rootUri": "file:///C:/Users/Mark%20Joshua/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/cupertino_icons-1.0.4",
       "packageUri": "lib/",
@@ -111,7 +117,7 @@
     },
     {
       "name": "image_picker",
-      "rootUri": "file:///C:/Users/Mark%20Joshua/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/image_picker-0.8.4+9",
+      "rootUri": "file:///C:/Users/Mark%20Joshua/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/image_picker-0.8.4+10",
       "packageUri": "lib/",
       "languageVersion": "2.14"
     },
@@ -170,6 +176,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "sizer",
+      "rootUri": "file:///C:/Users/Mark%20Joshua/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/sizer-2.0.15",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "sky_engine",
       "rootUri": "file:///C:/Users/Mark%20Joshua/flutter/flutter/bin/cache/pkg/sky_engine",
       "packageUri": "lib/",
@@ -218,6 +230,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "universal_io",
+      "rootUri": "file:///C:/Users/Mark%20Joshua/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/universal_io-2.0.4",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "vector_math",
       "rootUri": "file:///C:/Users/Mark%20Joshua/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/vector_math-2.1.1",
       "packageUri": "lib/",
@@ -230,7 +248,7 @@
       "languageVersion": "2.16"
     }
   ],
-  "generated": "2022-02-21T05:54:44.128383Z",
+  "generated": "2022-03-02T14:54:56.497694Z",
   "generator": "pub",
   "generatorVersion": "2.16.0"
 }

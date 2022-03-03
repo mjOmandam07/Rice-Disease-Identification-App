@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:rice_disease_detection/services/sampleTimer.dart';
+import 'package:sizer/sizer.dart';
 
 
 class splash extends StatefulWidget {
@@ -25,17 +26,18 @@ class _splashState extends State<splash> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Stack(
-        children: [
+    return Sizer(builder:(context, orientation, deviceType) {
+      return Scaffold(
+        body: Stack(
+          children: [
             Container(
-              decoration: BoxDecoration(
+            decoration: BoxDecoration(
                 gradient: LinearGradient(
-                  begin: Alignment.topCenter,
-                  end: Alignment.bottomCenter,
-                  colors: [Color.fromRGBO(66, 228, 9, 0.31), Color.fromRGBO(18, 226, 163, 1)]
+                    begin: Alignment.topCenter,
+                    end: Alignment.bottomCenter,
+                    colors: [Color.fromRGBO(66, 228, 9, 0.31), Color.fromRGBO(18, 226, 163, 1)]
                 )
-              ),
+            ),
             ),
             Column(
               children: [
@@ -49,29 +51,27 @@ class _splashState extends State<splash> {
                         children: [
                           Expanded(
                             child: Container(
-
                             ),
                           ),
                           Expanded(
-                              flex:3,
-                              child: Container(
-                                margin: EdgeInsets.fromLTRB(0, 80, 0, 0),
-                                height: 410,
-                                decoration: BoxDecoration(
+                            flex:3,
+                            child: Container(
+                              margin: EdgeInsets.fromLTRB(0, 9.h, 0, 0),
+                              height: 47.h,
+                              decoration: BoxDecoration(
                                   image: DecorationImage(
-                                    image: AssetImage('assets/glob.png'),
-                                    fit: BoxFit.fill
+                                      image: AssetImage('assets/glob.png'),
+                                      fit: BoxFit.fill
                                   )
-                                ),
-                          ),
+                              ),
+                            ),
                           ),
                         ],
                       ),
                     ),
                     Container(
-                      height: 550,
+                      height: 63.h,
                       decoration: BoxDecoration(
-                        // color: Colors.red,
                           image: DecorationImage(
                               image: AssetImage('assets/farmer.png'),
                               fit: BoxFit.cover
@@ -85,22 +85,24 @@ class _splashState extends State<splash> {
                   textAlign: TextAlign.center,
                   style: TextStyle(
                       color: Colors.white,
-                      fontSize: 35,
+                      fontSize: 25.sp,
                       fontFamily: 'Montserrat',
                       fontWeight: FontWeight.w500
                   ),
                 ),
                 SizedBox(
-                  height: 30,
+                  height: 5.h,
                 ),
                 SpinKitRing(
                   color: Colors.white,
-                  size: 60.0,
+                  size: 15.w,
                 ),
               ],
             ),
-        ],
-      ),
-    );
+          ],
+        ),
+      );
+    });
+
   }
 }
