@@ -3,7 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:rice_disease_detection/Clipper/clipper.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
-
+import 'package:sizer/sizer.dart';
 class home extends StatefulWidget {
   const home({Key? key}) : super(key: key);
 
@@ -14,204 +14,203 @@ class home extends StatefulWidget {
 class _homeState extends State<home> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor:Color.fromRGBO(18, 226, 163, 1),
-      body: Stack(
-        children: [
-          Container(
-            child: Column(
-              children: [
-                ClipPath(
-                  clipper: MyClipper(),
-                  child: Container(
-                    margin: EdgeInsets.all(0),
-                    color: Colors.white,
-                    height: 700,
-                  ),
-                ),
-                Expanded(
-                  child: Container(
-
-                  ),
-                )
-                
-              ],
-            ),
-          ),
-          Container(
-            child: Column(
-              children: [
-                SizedBox(height: 80),
-                Container(
-                  alignment: Alignment.topLeft,
-                  margin: EdgeInsets.only(bottom: 80),
-                  child: Padding(
-                    padding: const EdgeInsets.only(left: 8.0),
-                    child: Text(
-                      'Welcome',
-                      style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 40,
-                          fontFamily: 'Montserrat',
-                          fontWeight: FontWeight.w700
-                      ),
+    return Sizer(builder:(context, orientation, deviceType) {
+      return Scaffold(
+        backgroundColor:Color.fromRGBO(18, 226, 163, 1),
+        body: Stack(
+          children: [
+            Container(
+              child: Column(
+                children: [
+                  ClipPath(
+                    clipper: MyClipper(),
+                    child: Container(
+                      margin: EdgeInsets.all(0),
+                      color: Colors.white,
+                      height: 82.h,
                     ),
                   ),
-                ),
-                Expanded(
-                  child: Container(
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.only(bottom: 8.0),
-                          child: Text(
-                              'Scan Rice Leaf',
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                  color: Colors.black,
-                                  fontSize: 20,
-                                  fontFamily: 'Montserrat',
-                              ),
-                            ),
-                        ),
-                        SizedBox(
-                          height: 180,
-                          width: 180,
-                          child: ElevatedButton(
-                              onPressed: (){
-                              },
-                              style: ElevatedButton.styleFrom(
-                                primary: Colors.white,
-                                shadowColor: Colors.grey[900],
-                                elevation: 10,
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(20)
-                                )
-                              ),
-                              child: Image.asset('assets/scan.png')
+                ],
+              ),
+            ),
+            Container(
+                child: Column(
+                  children: [
+                    SizedBox(height: 10.h),
+                    // Top Part
+                    Container(
+                      alignment: Alignment.topLeft,
+                      margin: EdgeInsets.only(bottom: 10.h),
+                      child: Padding(
+                        padding: EdgeInsets.fromLTRB(2.w, 0, 0, 0),
+                        child: Text(
+                          'Welcome',
+                          style: TextStyle(
+                              color: Colors.black,
+                              fontSize: 30.sp,
+                              fontFamily: 'Montserrat',
+                              fontWeight: FontWeight.w700
                           ),
                         ),
-                      ],
-                    )
-                  ),
-                ),
-                Expanded(
-                  child: Container(
-                    margin: EdgeInsets.only(top: 50),
-                      alignment: Alignment.center,
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.fromLTRB(8.0, 8.0, 30, 8.0),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-                                Padding(
-                                  padding: const EdgeInsets.only(bottom: 8.0),
-                                  child: Text(
-                                    'Rice Diseases',
-                                    textAlign: TextAlign.center,
-                                    style: TextStyle(
-                                      color: Colors.black,
-                                      fontSize: 15,
-                                      fontFamily: 'Montserrat',
-                                    ),
-                                  ),
-                                ),
-                                SizedBox(
-                                  height: 120,
-                                  width: 120,
-                                  child: ElevatedButton(
-                                      onPressed: (){
-                                      },
-                                      style: ElevatedButton.styleFrom(
-                                          primary: Colors.white,
-                                          shadowColor: Colors.grey[900],
-                                          elevation: 10,
-                                          shape: RoundedRectangleBorder(
-                                              borderRadius: BorderRadius.circular(20)
-                                          )
-                                      ),
-                                      child: Image.asset('assets/diseases.png')
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.fromLTRB(30, 8.0, 8.0, 8.0),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-                                Padding(
-                                  padding: const EdgeInsets.only(bottom: 8.0),
-                                  child: Text(
-                                    'About the App',
-                                    textAlign: TextAlign.center,
-                                    style: TextStyle(
-                                      color: Colors.black,
-                                      fontSize: 15,
-                                      fontFamily: 'Montserrat',
-                                    ),
-                                  ),
-                                ),
-                                SizedBox(
-                                  height: 120,
-                                  width: 120,
-                                  child: ElevatedButton(
-                                      onPressed: (){
-                                      },
-                                      style: ElevatedButton.styleFrom(
-                                          primary: Colors.white,
-                                          shadowColor: Colors.grey[900],
-                                          elevation: 10,
-                                          shape: RoundedRectangleBorder(
-                                              borderRadius: BorderRadius.circular(20)
-                                          )
-                                      ),
-                                      child: Image.asset('assets/about.png')
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ],
                       ),
-                  ),
-                ),
-                Expanded(
-                  child: Container(
+                    ),
+                    //Scan Button Part
+                    Expanded(
+                      child: Container(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              Padding(
+                                padding: EdgeInsets.only(bottom: 1.h),
+                                child: Text(
+                                  'Scan Rice Leaf',
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                    color: Colors.black,
+                                    fontSize: 14.sp,
+                                    fontFamily: 'Montserrat',
+                                  ),
+                                ),
+                              ),
+                              SizedBox(
+                                height: 20.h,
+                                width: 45.w,
+                                child: ElevatedButton(
+                                    onPressed: (){
+                                      Navigator.pushNamed(context, '/scan');
+                                    },
+                                    style: ElevatedButton.styleFrom(
+                                        primary: Colors.white,
+                                        shadowColor: Colors.grey[900],
+                                        elevation: 10,
+                                        shape: RoundedRectangleBorder(
+                                            borderRadius: BorderRadius.circular(20)
+                                        )
+                                    ),
+                                    child: Image.asset('assets/scan.png')
+                                ),
+                              ),
+                            ],
+                          )
+                      ),
+                    ),
+                    // About and Rice Diseases library Part
+                    Expanded(
+                      child: Container(
+                        margin: EdgeInsets.only(top: 2.h),
+                        alignment: Alignment.center,
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Padding(
+                              padding: EdgeInsets.symmetric(vertical: 1.h, horizontal: 6.w),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: [
+                                  Padding(
+                                    padding: EdgeInsets.only(bottom: 1.h),
+                                    child: Text(
+                                      'Rice Diseases',
+                                      textAlign: TextAlign.center,
+                                      style: TextStyle(
+                                        color: Colors.black,
+                                        fontSize: 12.sp,
+                                        fontFamily: 'Montserrat',
+                                      ),
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    height: 14.h,
+                                    width: 30.w,
+                                    child: ElevatedButton(
+                                        onPressed: (){
+                                        },
+                                        style: ElevatedButton.styleFrom(
+                                            primary: Colors.white,
+                                            shadowColor: Colors.grey[900],
+                                            elevation: 10,
+                                            shape: RoundedRectangleBorder(
+                                                borderRadius: BorderRadius.circular(20)
+                                            )
+                                        ),
+                                        child: Image.asset('assets/diseases.png')
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                            Padding(
+                              padding: EdgeInsets.symmetric(vertical: 1.h, horizontal: 6.w),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: [
+                                  Padding(
+                                    padding: EdgeInsets.only(bottom: 1.h),
+                                    child: Text(
+                                      'About the App',
+                                      textAlign: TextAlign.center,
+                                      style: TextStyle(
+                                        color: Colors.black,
+                                        fontSize: 12.sp,
+                                        fontFamily: 'Montserrat',
+                                      ),
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    height: 14.h,
+                                    width: 30.w,
+                                    child: ElevatedButton(
+                                        onPressed: (){
+                                        },
+                                        style: ElevatedButton.styleFrom(
+                                            primary: Colors.white,
+                                            shadowColor: Colors.grey[900],
+                                            elevation: 10,
+                                            shape: RoundedRectangleBorder(
+                                                borderRadius: BorderRadius.circular(20)
+                                            )
+                                        ),
+                                        child: Image.asset('assets/about.png')
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                    // Help Button Part
+                    Container(
                       alignment: Alignment.bottomRight,
-                      padding: EdgeInsets.only(bottom: 10, right: 5),
+                      padding: EdgeInsets.only(bottom: 1.h, right: 2.w),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.end,
                         children: [
                           Padding(
-                            padding: const EdgeInsets.only(right: 10.0),
-                            child: SizedBox(
-                              child: DefaultTextStyle(
-                                style: TextStyle(
-                                  color: Colors.black,
-                                  fontSize: 20,
-                                  fontFamily: 'Montserrat'
-                                ), child: AnimatedTextKit(
-                                animatedTexts: [
-                                  FadeAnimatedText(
-                                    'Help',
-                                      duration: Duration(milliseconds: 5000)
+                              padding: EdgeInsets.only(right: 2.w),
+                              child: SizedBox(
+                                  child: DefaultTextStyle(
+                                    style: TextStyle(
+                                        color: Colors.black,
+                                        fontSize: 15.sp,
+                                        fontFamily: 'Montserrat'
+                                    ), child: AnimatedTextKit(
+                                      animatedTexts: [
+                                        FadeAnimatedText(
+                                            'Help',
+                                            duration: Duration(milliseconds: 5000)
+                                        )
+                                      ],
+                                      pause: const Duration(milliseconds: 5000),
+                                      repeatForever:true
+                                  ),
                                   )
-                                ],
-                                  pause: const Duration(milliseconds: 5000),
-                                  repeatForever:true
-                              ),
                               )
-                            )
                           ),
                           SizedBox(
-                            height: 80,
-                            width: 80,
+                            height: 7.h,
+                            width: 15.w,
                             child: ElevatedButton(
                                 onPressed: (){
                                 },
@@ -228,15 +227,16 @@ class _homeState extends State<home> {
                           ),
                         ],
                       ),
-                  ),
-                ),
-              ],
-            )
-          ),
+                    ),
+                  ],
+                )
+            ),
 
-        ],
-      ),
-    );
+          ],
+        ),
+      );
+    });
+
   }
 }
 
