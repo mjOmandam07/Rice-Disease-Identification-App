@@ -77,7 +77,7 @@ class _homeState extends State<home> {
                                 width: 45.w,
                                 child: ElevatedButton(
                                     onPressed: (){
-                                      Navigator.pushNamed(context, '/scan');
+
                                     },
                                     style: ElevatedButton.styleFrom(
                                         primary: Colors.white,
@@ -124,6 +124,7 @@ class _homeState extends State<home> {
                                     width: 30.w,
                                     child: ElevatedButton(
                                         onPressed: (){
+                                          Navigator.pushNamed(context, '/diseases');
                                         },
                                         style: ElevatedButton.styleFrom(
                                             primary: Colors.white,

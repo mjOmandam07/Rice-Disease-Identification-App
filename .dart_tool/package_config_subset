@@ -10,6 +10,10 @@ boolean_selector
 2.12
 file:///C:/Users/Mark%20Joshua/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/boolean_selector-2.1.0/
 file:///C:/Users/Mark%20Joshua/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/boolean_selector-2.1.0/lib/
+carousel_slider
+2.12
+file:///C:/Users/Mark%20Joshua/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/carousel_slider-4.0.0/
+file:///C:/Users/Mark%20Joshua/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/carousel_slider-4.0.0/lib/
 characters
 2.12
 file:///C:/Users/Mark%20Joshua/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/characters-1.2.0/
@@ -34,6 +38,10 @@ crypto
 2.12
 file:///C:/Users/Mark%20Joshua/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/crypto-3.0.1/
 file:///C:/Users/Mark%20Joshua/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/crypto-3.0.1/lib/
+csv
+2.12
+file:///C:/Users/Mark%20Joshua/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/csv-5.0.1/
+file:///C:/Users/Mark%20Joshua/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/csv-5.0.1/lib/
 cupertino_icons
 2.12
 file:///C:/Users/Mark%20Joshua/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/cupertino_icons-1.0.4/
@@ -106,6 +114,10 @@ sizer
 2.12
 file:///C:/Users/Mark%20Joshua/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/sizer-2.0.15/
 file:///C:/Users/Mark%20Joshua/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/sizer-2.0.15/lib/
+smooth_page_indicator
+2.12
+file:///C:/Users/Mark%20Joshua/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/smooth_page_indicator-1.0.0+2/
+file:///C:/Users/Mark%20Joshua/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/smooth_page_indicator-1.0.0+2/lib/
 source_span
 2.12
 file:///C:/Users/Mark%20Joshua/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/source_span-1.8.1/

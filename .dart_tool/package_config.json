@@ -20,6 +20,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "carousel_slider",
+      "rootUri": "file:///C:/Users/Mark%20Joshua/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/carousel_slider-4.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "characters",
       "rootUri": "file:///C:/Users/Mark%20Joshua/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/characters-1.2.0",
       "packageUri": "lib/",
@@ -52,6 +58,12 @@
     {
       "name": "crypto",
       "rootUri": "file:///C:/Users/Mark%20Joshua/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/crypto-3.0.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "csv",
+      "rootUri": "file:///C:/Users/Mark%20Joshua/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/csv-5.0.1",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -188,6 +200,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "smooth_page_indicator",
+      "rootUri": "file:///C:/Users/Mark%20Joshua/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/smooth_page_indicator-1.0.0+2",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "source_span",
       "rootUri": "file:///C:/Users/Mark%20Joshua/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/source_span-1.8.1",
       "packageUri": "lib/",
@@ -248,7 +266,7 @@
       "languageVersion": "2.16"
     }
   ],
-  "generated": "2022-03-03T07:44:31.308676Z",
+  "generated": "2022-03-08T06:47:44.637495Z",
   "generator": "pub",
   "generatorVersion": "2.16.0"
 }
