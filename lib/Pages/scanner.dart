@@ -13,9 +13,20 @@ class scanner extends StatefulWidget {
   _scannerState createState() => _scannerState();
 }
 
+
 class _scannerState extends State<scanner> {
 
   File ? imageFile;
+
+
+  @override
+  void initState() {
+    setState(() {
+      imageFile = null;
+    });
+  }
+
+
 
   @override
   Widget build(BuildContext context) {
@@ -208,34 +219,83 @@ class _scannerState extends State<scanner> {
                             ),
 
                             SizedBox(
-                              height: 4.h,
+                              height: 2.h,
                             ),
-                            SizedBox(
-                              height: 12.h,
-                              width: 70.w,
-                              child: ElevatedButton(
-                                  onPressed: (){
-
-                                  },
-                                  style: ElevatedButton.styleFrom(
-                                      primary: Colors.white,
-                                      shadowColor: Colors.grey[900],
-                                      elevation: 10,
-                                      shape: RoundedRectangleBorder(
-                                          borderRadius: BorderRadius.circular(10)
+                            if (imageFile != null)
+                              Column(
+                                children: [
+                                  SizedBox(
+                                  height: 10.h,
+                                  width: 50.w,
+                                  child: ElevatedButton(
+                                      onPressed: (){
+                                        print(imageFile);
+                                        Navigator.pushNamed(
+                                            context,
+                                            '/analyze',
+                                            arguments: {
+                                              'image': imageFile
+                                            });
+                                      },
+                                      style: ElevatedButton.styleFrom(
+                                          primary: Colors.white,
+                                          shadowColor: Colors.grey[900],
+                                          elevation: 10,
+                                          shape: RoundedRectangleBorder(
+                                              borderRadius: BorderRadius.circular(10)
+                                          )
+                                      ),
+                                      child: Text(
+                                        'Scan Image',
+                                        textAlign: TextAlign.center,
+                                        style: TextStyle(
+                                            color: Color.fromRGBO(3, 135, 96, 1.0),
+                                            fontSize: 16.sp,
+                                            fontFamily: 'Montserrat',
+                                            fontWeight: FontWeight.bold
+                                        ),
                                       )
                                   ),
-                                  child: Text(
-                                    'Scan Image',
-                                    textAlign: TextAlign.center,
-                                    style: TextStyle(
-                                        color: Color.fromRGBO(3, 135, 96, 1.0),
-                                        fontSize: 18.sp,
-                                        fontFamily: 'Montserrat',
-                                        fontWeight: FontWeight.bold
+                            ),
+                                  Padding(
+                                    padding: EdgeInsets.only(top: 1.h),
+                                    child: SizedBox(
+                                      height: 6.h,
+                                      width: 35.w,
+                                      child: ElevatedButton(
+                                          onPressed: (){
+                                            setState(() {
+                                              imageFile = null;
+                                            });
+                                            print(imageFile);
+                                          },
+                                          style: ElevatedButton.styleFrom(
+                                              primary: Colors.white,
+                                              shadowColor: Colors.grey[900],
+                                              elevation: 10,
+                                              shape: RoundedRectangleBorder(
+                                                  borderRadius: BorderRadius.circular(10)
+                                              )
+                                          ),
+                                          child: Text(
+                                            'Clear Image',
+                                            textAlign: TextAlign.center,
+                                            style: TextStyle(
+                                                color: Color.fromRGBO(3, 135, 96, 1.0),
+                                                fontSize: 12.sp,
+                                                fontFamily: 'Montserrat',
+
+                                            ),
+                                          )
+                                      ),
                                     ),
                                   )
-                              ),
+                                ],
+                              )
+                            else
+                              SizedBox(
+                              height: 12.h,
+                              width: 70.w
                             ),
                           ],
                         ),

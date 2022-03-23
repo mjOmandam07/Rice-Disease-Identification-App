@@ -1,4 +1,4 @@
-#Thu Mar 03 15:28:38 SGT 2022
+#Wed Mar 23 20:19:20 SGT 2022
 base.0=D\:\\Flutter Projects\\rice_disease_detection\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
 renamed.0=classes.dex
 path.0=classes.dex
