@@ -1,4 +1,4 @@
-#Wed Mar 09 20:19:37 SGT 2022
-base.0=D\:\\Flutter Projects\\rice_disease_detection\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+#Thu Mar 31 20:09:41 CST 2022
+base.0=E\:\\flutter projects\\Rice-Disease-Detection-App\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
 renamed.0=classes.dex
 path.0=classes.dex
