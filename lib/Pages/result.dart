@@ -3,6 +3,9 @@ import 'package:rice_disease_detection/Clipper/clipper.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
+import 'package:rice_disease_detection/services/classifier.dart';
+import 'dart:io';
+
 
 class analysis extends StatefulWidget {
   const analysis({Key? key}) : super(key: key);
@@ -13,19 +16,47 @@ class analysis extends StatefulWidget {
   Map data = {};
 
 class _analysisState extends State<analysis> {
+  final Classifier classifier = Classifier();
 
-  var _output;
-  var image;
-  var _loading = true;
+  File? image;
+
+  var result_1;
+  var result_2;
+  var result_3;
+  var outputs;
 
 
   Future timer() async {
-    await Future.delayed(Duration(seconds: 5), () {
+    await Future.delayed(Duration(seconds: 0), () {
       image = data['image'];
-      print(image);
+      classifier.classifyImage(image);
+
+    });
+    return image;
+    // try {
+    //   classify();
+    // } catch(e) {
+    //   print(e);
+    // }
+    // return image;
+  }
+
+  Future classify() async {
+    await Future.delayed(Duration(seconds: 2), () async{
+      try {
+        image = data['image'];
+        outputs = await classifier.classifyImage(image);
+        print(outputs);
+        result_1 = outputs[0];
+        result_2 = outputs[1];
+        result_3 = outputs[2];
+      } catch(e) {
+        print(e);
+      }
     });
     return image;
   }
+
 
 
 
@@ -164,7 +195,7 @@ class _analysisState extends State<analysis> {
                                                     child: Container(
                                                       child: Center(
                                                         child: Text(
-                                                          'Leaf Blight: 89.9%',
+                                                          '${result_1['disease']}: ${result_1['confidence']}%',
                                                           style: TextStyle(
                                                               color: Color.fromRGBO(
                                                                   50, 50, 50,
@@ -182,7 +213,7 @@ class _analysisState extends State<analysis> {
                                                     child: Container(
                                                       child: Center(
                                                         child: Text(
-                                                          'Leaf Blight: 89.9%',
+                                                          '${result_2['disease']}: ${result_2['confidence']}%',
                                                           style: TextStyle(
                                                               color: Color.fromRGBO(
                                                                   50, 50, 50,
@@ -200,7 +231,7 @@ class _analysisState extends State<analysis> {
                                                     child: Container(
                                                       child: Center(
                                                         child: Text(
-                                                          'Leaf Blight: 89.9%',
+                                                          '${result_3['disease']}: ${result_3['confidence']}%',
                                                           style: TextStyle(
                                                               color: Color.fromRGBO(
                                                                   50, 50, 50,
@@ -283,7 +314,7 @@ class _analysisState extends State<analysis> {
                                               );
                                             }
                                         },
-                                        future: timer(),
+                                        future: classify(),
                                         )
                                       ),
 
