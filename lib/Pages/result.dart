@@ -254,7 +254,7 @@ class _analysisState extends State<analysis> {
                                                           width: 40.w,
                                                           child: ElevatedButton(
                                                               onPressed: (){
-                                                                data = {};
+                                                                data.clear();
                                                                 Navigator.of(context).pop();
                                                               },
                                                               style: ElevatedButton.styleFrom(
@@ -283,7 +283,7 @@ class _analysisState extends State<analysis> {
                                                           child: ElevatedButton(
                                                               onPressed: (){
 
-                                                                data = {};
+                                                                data.clear();
                                                                 Navigator.of(context).popUntil((route) => route.settings.name == "/home");
                                                               },
                                                               style: ElevatedButton.styleFrom(
