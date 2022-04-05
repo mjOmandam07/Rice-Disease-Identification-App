@@ -163,6 +163,7 @@ class _homeState extends State<home> {
                                     width: 30.w,
                                     child: ElevatedButton(
                                         onPressed: (){
+                                          Navigator.pushNamed(context, '/about');
                                         },
                                         style: ElevatedButton.styleFrom(
                                             primary: Colors.white,

@@ -62,7 +62,6 @@
       "languageVersion": "2.12"
     },
     {
-
       "name": "csv",
       "rootUri": "file:///C:/Users/Mark%20Joshua/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/csv-5.0.1",
       "packageUri": "lib/",
@@ -267,7 +266,7 @@
       "languageVersion": "2.16"
     }
   ],
-  "generated": "2022-04-05T05:50:53.963895Z",
+  "generated": "2022-04-05T12:02:59.398963Z",
   "generator": "pub",
   "generatorVersion": "2.16.1"
 }
