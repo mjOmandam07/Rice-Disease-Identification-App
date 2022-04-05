@@ -3,8 +3,8 @@ import 'package:flutter/services.dart';
 import 'package:rice_disease_detection/Pages/splash.dart';
 import 'package:rice_disease_detection/Pages/home.dart';
 import 'package:rice_disease_detection/Pages/about.dart';
-
-
+import 'package:rice_disease_detection/Pages/diseases.dart';
+import 'package:rice_disease_detection/Pages/selected_disease.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -16,8 +16,8 @@ void main() {
         '/': (context) => const splash(),
         '/home': (context) => const home(),
         '/about': (context) => const about(),
-
-        //'/scan': (context) => const scanner(),
+        '/diseases': (context) => const disease(),
+        '/selected': (context) => const selected_disease(),
       },
     )),
   );
