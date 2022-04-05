@@ -1,9 +1,11 @@
 import 'dart:ui';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:rice_disease_detection/Clipper/clipper.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:sizer/sizer.dart';
+import 'package:carousel_slider/carousel_slider.dart';
 
 class home extends StatefulWidget {
   const home({Key? key}) : super(key: key);
@@ -13,6 +15,9 @@ class home extends StatefulWidget {
 }
 
 class _homeState extends State<home> {
+
+  int slide_index = 0;
+
   @override
   Widget build(BuildContext context) {
     return Sizer(builder:(context, orientation, deviceType) {
@@ -78,7 +83,7 @@ class _homeState extends State<home> {
                                 width: 45.w,
                                 child: ElevatedButton(
                                     onPressed: (){
-
+                                      Navigator.pushNamed(context, '/scan');
                                     },
                                     style: ElevatedButton.styleFrom(
                                         primary: Colors.white,
@@ -216,6 +221,441 @@ class _homeState extends State<home> {
                             width: 15.w,
                             child: ElevatedButton(
                                 onPressed: (){
+                                    showDialog(
+                                      context:context,
+                                      builder: (BuildContext context) {
+                                        return  Dialog(
+                                          backgroundColor: Colors.white,
+                                          child: Container(
+                                            width: 100.w,
+                                            height: 50.h ,
+                                            child: Column(
+                                              children: [
+                                                Padding(
+                                                  padding: EdgeInsets.all(1.h),
+                                                  child: Container(
+                                                    alignment: Alignment.topLeft,
+                                                    child: Text(
+                                                      'How to use the app?',
+                                                      style: TextStyle(
+                                                          color: Colors.black,
+                                                          fontSize: 20.sp,
+                                                          fontFamily: 'Montserrat',
+                                                          fontWeight: FontWeight.w700
+                                                      ),
+                                                    ),
+                                                    ),
+                                                ),
+                                                Expanded(
+                                                    flex: 7,
+                                                    child:
+                                                          Container(
+                                                            child: CarouselSlider(
+                                                              options: CarouselOptions(
+                                                                  height: double.maxFinite,
+                                                                  viewportFraction: 1,
+                                                                  onPageChanged: (index, reason) {
+                                                                    setState(() {
+                                                                      slide_index = index;
+                                                                    }
+                                                                    );
+                                                                  }
+                                                              ), items: [
+                                                                Container(
+                                                                  margin: EdgeInsets.only(bottom: 1.h),
+                                                                  height: 40.h,
+                                                                  width: 78.w,
+                                                                  decoration: BoxDecoration(
+                                                                      color: Color.fromRGBO(
+                                                                          18,
+                                                                          226,
+                                                                          163,
+                                                                          1.0),
+                                                                      borderRadius: BorderRadius.all(Radius.circular(10))
+                                                                  ),
+                                                                  child: Padding(
+                                                                    padding:  EdgeInsets.all(1.w),
+                                                                    child: Column(
+                                                                      children: [
+                                                                        Align(
+                                                                          alignment: Alignment.topLeft,
+                                                                          child: Text(
+                                                                            'Step 1:',
+                                                                            style: TextStyle(
+                                                                                color: Colors.white,
+                                                                                fontSize: 22.sp,
+                                                                                fontFamily: 'Montserrat',
+                                                                                fontWeight: FontWeight.w700
+                                                                            ),
+                                                                          ),
+                                                                        ),
+                                                                        Center(
+                                                                          child: Padding(
+                                                                            padding: EdgeInsets.only(top: 1.h),
+                                                                            child: Container(
+                                                                              decoration: BoxDecoration(
+                                                                                  color: Colors.white,
+                                                                                  borderRadius: BorderRadius.all(Radius.circular(10))
+                                                                              ),
+                                                                              child: Padding(
+                                                                                padding: EdgeInsets.all(1.w),
+                                                                                child: Container(
+                                                                                  height: 15.h,
+                                                                                  width: 35.w,
+                                                                                  decoration: BoxDecoration(
+                                                                                    image: DecorationImage(
+                                                                                      image: AssetImage('assets/scan.png'),
+                                                                                      fit: BoxFit.fill
+                                                                                    )
+                                                                                  ),
+                                                                                ),
+                                                                              ),
+                                                                            ),
+                                                                          ),
+                                                                        ),
+                                                                        SizedBox(
+                                                                          height: 2.h,
+                                                                        ),
+                                                                        Align(
+                                                                          alignment: Alignment.centerLeft,
+                                                                          child: Text(
+                                                                            'Select the Scanner button in the home menu.',
+                                                                            style: TextStyle(
+                                                                                color: Colors.white,
+                                                                                fontSize: 15.sp,
+                                                                                fontFamily: 'Montserrat',
+                                                                            ),
+                                                                          ),
+                                                                        ),
+
+                                                                      ],
+                                                                    ),
+                                                                  ),
+                                                                ),
+                                                                Container(
+                                                                margin: EdgeInsets.only(bottom: 1.h),
+                                                                height: 40.h,
+                                                                width: 78.w,
+                                                                decoration: BoxDecoration(
+                                                                    color: Color.fromRGBO(
+                                                                        18,
+                                                                        226,
+                                                                        163,
+                                                                        1.0),
+                                                                    borderRadius: BorderRadius.all(Radius.circular(10))
+                                                                ),
+                                                                child: Padding(
+                                                                  padding:  EdgeInsets.all(1.w),
+                                                                  child: Column(
+                                                                    children: [
+                                                                      Align(
+                                                                        alignment: Alignment.topLeft,
+                                                                        child: Text(
+                                                                          'Step 2:',
+                                                                          style: TextStyle(
+                                                                              color: Colors.white,
+                                                                              fontSize: 22.sp,
+                                                                              fontFamily: 'Montserrat',
+                                                                              fontWeight: FontWeight.w700
+                                                                          ),
+                                                                        ),
+                                                                      ),
+                                                                      SizedBox(height: 2.h),
+                                                                      Row(
+                                                                        mainAxisAlignment: MainAxisAlignment.center,
+                                                                        children: [
+                                                                          Column(
+                                                                        children: [
+                                                                          Container(
+                                                                          decoration: BoxDecoration(
+                                                                          color: Colors.white,
+                                                                              borderRadius: BorderRadius.all(Radius.circular(10))
+                                                                          ),
+                                                                          child: Padding(
+                                                                              padding: EdgeInsets.all(1.w),
+                                                                              child: Container(
+                                                                                height: 6.h,
+                                                                                width: 15.w,
+                                                                                decoration: BoxDecoration(
+                                                                                    image: DecorationImage(
+                                                                                        image: AssetImage('assets/camera.png'),
+                                                                                        fit: BoxFit.fill
+                                                                                    )
+                                                                                ),
+                                                                              ),
+                                                                            )
+                                                                          ),
+                                                                          SizedBox(height: 1.h),
+                                                                          Text('Take Picture \n using Camera',
+                                                                            style: TextStyle(
+                                                                              color: Colors.black,
+                                                                              fontFamily: 'Montserrat',
+                                                                            ),
+                                                                            textAlign: TextAlign.center,
+                                                                          )
+                                                                        ],
+                                                                      ),
+                                                                          SizedBox(width: 2.w),
+                                                                          Column(
+                                                                            children: [
+                                                                              Container(
+                                                                                  decoration: BoxDecoration(
+                                                                                      color: Colors.white,
+                                                                                      borderRadius: BorderRadius.all(Radius.circular(10))
+                                                                                  ),
+                                                                                  child: Padding(
+                                                                                    padding: EdgeInsets.all(1.w),
+                                                                                    child: Container(
+                                                                                      height: 6.h,
+                                                                                      width: 15.w,
+                                                                                      decoration: BoxDecoration(
+                                                                                          image: DecorationImage(
+                                                                                              image: AssetImage('assets/add-photo.png'),
+                                                                                              fit: BoxFit.fill
+                                                                                          )
+                                                                                      ),
+                                                                                    ),
+                                                                                  )
+                                                                              ),
+                                                                              SizedBox(height: 1.h),
+                                                                              Text('Select Image \n from Gallery',
+                                                                                style: TextStyle(
+                                                                                  color: Colors.black,
+                                                                                  fontFamily: 'Montserrat',
+                                                                                ),
+                                                                                textAlign: TextAlign.center,
+                                                                              )
+                                                                            ],
+                                                                          )
+                                                                        ]
+                                                                      ),
+                                                                      SizedBox(
+                                                                        height: 1.5.h,
+                                                                      ),
+                                                                      Align(
+                                                                        alignment: Alignment.centerLeft,
+                                                                        child: Text(
+                                                                          'Choose your option for scanning. You can use your camera for taking picture of the rice leaf or select stock images from your Gallery.',
+                                                                          style: TextStyle(
+                                                                            color: Colors.white,
+                                                                            fontSize: 12.sp,
+                                                                            fontFamily: 'Montserrat',
+                                                                          ),
+                                                                        ),
+                                                                      ),
+
+                                                                    ],
+                                                                  ),
+                                                                ),
+                                                              ),
+                                                                Container(
+                                                                margin: EdgeInsets.only(bottom: 1.h),
+                                                                height: 40.h,
+                                                                width: 78.w,
+                                                                decoration: BoxDecoration(
+                                                                    color: Color.fromRGBO(
+                                                                        18,
+                                                                        226,
+                                                                        163,
+                                                                        1.0),
+                                                                    borderRadius: BorderRadius.all(Radius.circular(10))
+                                                                ),
+                                                                child: Padding(
+                                                                  padding:  EdgeInsets.all(1.w),
+                                                                  child: Column(
+                                                                    children: [
+                                                                      Align(
+                                                                        alignment: Alignment.topLeft,
+                                                                        child: Text(
+                                                                          'Step 3:',
+                                                                          style: TextStyle(
+                                                                              color: Colors.white,
+                                                                              fontSize: 22.sp,
+                                                                              fontFamily: 'Montserrat',
+                                                                              fontWeight: FontWeight.w700
+                                                                          ),
+                                                                        ),
+                                                                      ),
+                                                                      SizedBox(height: 2.h),
+                                                                      Row(
+                                                                          mainAxisAlignment: MainAxisAlignment.center,
+                                                                          children: [
+                                                                            Column(
+                                                                              children: [
+                                                                                Container(
+                                                                                    decoration: BoxDecoration(
+                                                                                        color: Colors.white,
+                                                                                        borderRadius: BorderRadius.all(Radius.circular(10))
+                                                                                    ),
+                                                                                    child: Padding(
+                                                                                      padding: EdgeInsets.all(1.w),
+                                                                                      child: Container(
+                                                                                        height: 6.h,
+                                                                                        width: 25.w,
+                                                                                        child:Center(
+                                                                                          child: Text(
+                                                                                            'Clear Image',
+                                                                                            textAlign: TextAlign.center,
+                                                                                            style: TextStyle(
+                                                                                              color: Color.fromRGBO(3, 135, 96, 1.0),
+                                                                                              fontFamily: 'Montserrat',
+
+                                                                                            ),
+                                                                                          ),
+                                                                                        )
+                                                                                      ),
+                                                                                    )
+                                                                                ),
+                                                                                SizedBox(height: 1.h),
+                                                                                Text('Clear Image \n Button',
+                                                                                  style: TextStyle(
+                                                                                    color: Colors.black,
+                                                                                    fontFamily: 'Montserrat',
+                                                                                  ),
+                                                                                  textAlign: TextAlign.center,
+                                                                                )
+                                                                              ],
+                                                                            ),
+                                                                            SizedBox(width: 2.w),
+                                                                            Column(
+                                                                              children: [
+                                                                                Container(
+                                                                                    decoration: BoxDecoration(
+                                                                                        color: Colors.white,
+                                                                                        borderRadius: BorderRadius.all(Radius.circular(10))
+                                                                                    ),
+                                                                                    child: Padding(
+                                                                                      padding: EdgeInsets.all(1.w),
+                                                                                      child: Container(
+                                                                                          height: 6.h,
+                                                                                          width: 25.w,
+                                                                                          child:Center(
+                                                                                            child: Text(
+                                                                                              'Scan Image',
+                                                                                              textAlign: TextAlign.center,
+                                                                                              style: TextStyle(
+                                                                                                color: Color.fromRGBO(3, 135, 96, 1.0),
+                                                                                                fontFamily: 'Montserrat',
+                                                                                                  fontWeight: FontWeight.bold
+                                                                                              ),
+                                                                                            ),
+                                                                                          )
+                                                                                      ),
+                                                                                    )
+                                                                                ),
+                                                                                SizedBox(height: 1.h),
+                                                                                Text('Scan Image \n Button',
+                                                                                  style: TextStyle(
+                                                                                    color: Colors.black,
+                                                                                    fontFamily: 'Montserrat',
+                                                                                  ),
+                                                                                  textAlign: TextAlign.center,
+                                                                                )
+                                                                              ],
+                                                                            ),
+                                                                          ]
+                                                                      ),
+                                                                      SizedBox(
+                                                                        height: 1.5.h,
+                                                                      ),
+                                                                      Align(
+                                                                        alignment: Alignment.centerLeft,
+                                                                        child: Text(
+                                                                          'If not sure of the selected image, or the selected image is a mistake, you can always clear the image field and select again. If the selected image is the desired image for scanning, tap on the Scan Image button.',
+                                                                          style: TextStyle(
+                                                                            color: Colors.white,
+                                                                            fontSize: 11.sp,
+                                                                            fontFamily: 'Montserrat',
+                                                                          ),
+                                                                        ),
+                                                                      ),
+
+                                                                    ],
+                                                                  ),
+                                                                ),
+                                                              ),
+                                                                Container(
+                                                                margin: EdgeInsets.only(bottom: 1.h),
+                                                                height: 40.h,
+                                                                width: 78.w,
+                                                                decoration: BoxDecoration(
+                                                                    color: Color.fromRGBO(
+                                                                        18,
+                                                                        226,
+                                                                        163,
+                                                                        1.0),
+                                                                    borderRadius: BorderRadius.all(Radius.circular(10))
+                                                                ),
+                                                                child: Padding(
+                                                                  padding:  EdgeInsets.all(1.w),
+                                                                  child: Column(
+                                                                    children: [
+                                                                      Align(
+                                                                        alignment: Alignment.topLeft,
+                                                                        child: Text(
+                                                                          'Step 4:',
+                                                                          style: TextStyle(
+                                                                              color: Colors.white,
+                                                                              fontSize: 22.sp,
+                                                                              fontFamily: 'Montserrat',
+                                                                              fontWeight: FontWeight.w700
+                                                                          ),
+                                                                        ),
+                                                                      ),
+                                                                      Center(
+                                                                        child: Padding(
+                                                                          padding: EdgeInsets.only(top: 1.h),
+                                                                          child: Container(
+                                                                            decoration: BoxDecoration(
+                                                                                color: Colors.white,
+                                                                                borderRadius: BorderRadius.all(Radius.circular(10))
+                                                                            ),
+                                                                            child: Padding(
+                                                                              padding: EdgeInsets.all(1.w),
+                                                                              child: Container(
+                                                                                height: 15.h,
+                                                                                width: 40.w,
+                                                                                decoration: BoxDecoration(
+                                                                                    image: DecorationImage(
+                                                                                        image: AssetImage('assets/results.jpg'),
+                                                                                        fit: BoxFit.fill
+                                                                                    )
+                                                                                ),
+                                                                              ),
+                                                                            ),
+                                                                          ),
+                                                                        ),
+                                                                      ),
+                                                                      SizedBox(
+                                                                        height: 2.h,
+                                                                      ),
+                                                                      Align(
+                                                                        alignment: Alignment.centerLeft,
+                                                                        child: Text(
+                                                                          'After classifying, it shows the top three diseases that has the highest confidence. Then you are given an option to scan again or return to homepage by tapping on the Done button.',
+                                                                          style: TextStyle(
+                                                                            color: Colors.white,
+                                                                            fontSize: 11.sp,
+                                                                            fontFamily: 'Montserrat',
+                                                                          ),
+                                                                        ),
+                                                                      ),
+
+                                                                    ],
+                                                                  ),
+                                                                ),
+                                                              ),
+                                                            ],
+                                                            ),
+                                                          )
+                                                )
+                                              ],
+                                            ),
+
+                                          )
+                                        );
+                                      }
+                                    );
                                 },
                                 style: ElevatedButton.styleFrom(
                                     primary: Colors.white,

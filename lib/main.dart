@@ -5,6 +5,9 @@ import 'package:rice_disease_detection/Pages/home.dart';
 import 'package:rice_disease_detection/Pages/about.dart';
 import 'package:rice_disease_detection/Pages/diseases.dart';
 import 'package:rice_disease_detection/Pages/selected_disease.dart';
+import 'package:rice_disease_detection/Pages/scanner.dart';
+import 'package:rice_disease_detection/Pages/result.dart';
+
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -18,6 +21,8 @@ void main() {
         '/about': (context) => const about(),
         '/diseases': (context) => const disease(),
         '/selected': (context) => const selected_disease(),
+        '/scan': (context) => const scanner(),
+        '/analyze': (context) => const analysis()
       },
     )),
   );

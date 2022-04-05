@@ -5,13 +5,15 @@
     android:versionName="1.0.0" >
 
     <uses-sdk
-        android:minSdkVersion="16"
+        android:minSdkVersion="21"
         android:targetSdkVersion="31" />
     <!--
          Flutter needs it to communicate with the running application
          to allow setting breakpoints, to provide hot reload, etc.
     -->
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CAMERA" />
 
     <application
         android:name="android.app.Application"
