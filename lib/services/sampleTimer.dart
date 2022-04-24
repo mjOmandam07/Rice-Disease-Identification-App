@@ -2,7 +2,7 @@ class Timer{
 
   Future<void> getTime() async {
     try {
-        await Future.delayed(Duration(seconds: 10), ()
+        await Future.delayed(Duration(seconds: 3), ()
         {
           print('Welcome');
         });

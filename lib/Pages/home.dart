@@ -228,7 +228,7 @@ class _homeState extends State<home> {
                                           backgroundColor: Colors.white,
                                           child: Container(
                                             width: 100.w,
-                                            height: 50.h ,
+                                            height: 60.h ,
                                             child: Column(
                                               children: [
                                                 Padding(
@@ -249,19 +249,20 @@ class _homeState extends State<home> {
                                                 Expanded(
                                                     flex: 7,
                                                     child:
-                                                          Container(
-                                                            child: CarouselSlider(
-                                                              options: CarouselOptions(
-                                                                  height: double.maxFinite,
-                                                                  viewportFraction: 1,
-                                                                  onPageChanged: (index, reason) {
-                                                                    setState(() {
-                                                                      slide_index = index;
-                                                                    }
-                                                                    );
+                                                          CarouselSlider(
+                                                            options: CarouselOptions(
+                                                                height: double.maxFinite,
+                                                                viewportFraction: 1,
+                                                                onPageChanged: (index, reason) {
+                                                                  setState(() {
+                                                                    slide_index = index;
                                                                   }
-                                                              ), items: [
-                                                                Container(
+                                                                  );
+                                                                }
+                                                            ), items: [
+                                                              Padding(
+                                                                padding: EdgeInsets.all(1.w),
+                                                                child: Container(
                                                                   margin: EdgeInsets.only(bottom: 1.h),
                                                                   height: 40.h,
                                                                   width: 78.w,
@@ -271,12 +272,23 @@ class _homeState extends State<home> {
                                                                           226,
                                                                           163,
                                                                           1.0),
-                                                                      borderRadius: BorderRadius.all(Radius.circular(10))
+                                                                      boxShadow: [
+                                                                        BoxShadow(
+                                                                            color: Colors.grey,
+                                                                            offset: const Offset(
+                                                                                1.0,
+                                                                                5.0
+                                                                            ),
+                                                                            blurRadius: 10.0,
+                                                                            spreadRadius:2.0
+                                                                        ),
+                                                                      ]
                                                                   ),
                                                                   child: Padding(
                                                                     padding:  EdgeInsets.all(1.w),
                                                                     child: Column(
                                                                       children: [
+                                                                        SizedBox(height: 2.h),
                                                                         Align(
                                                                           alignment: Alignment.topLeft,
                                                                           child: Text(
@@ -291,7 +303,7 @@ class _homeState extends State<home> {
                                                                         ),
                                                                         Center(
                                                                           child: Padding(
-                                                                            padding: EdgeInsets.only(top: 1.h),
+                                                                            padding: EdgeInsets.only(top: 4.h),
                                                                             child: Container(
                                                                               decoration: BoxDecoration(
                                                                                   color: Colors.white,
@@ -314,7 +326,7 @@ class _homeState extends State<home> {
                                                                           ),
                                                                         ),
                                                                         SizedBox(
-                                                                          height: 2.h,
+                                                                          height: 5.h,
                                                                         ),
                                                                         Align(
                                                                           alignment: Alignment.centerLeft,
@@ -332,7 +344,10 @@ class _homeState extends State<home> {
                                                                     ),
                                                                   ),
                                                                 ),
-                                                                Container(
+                                                              ),
+                                                              Padding(
+                                                                padding: EdgeInsets.all(1.w),
+                                                                child: Container(
                                                                 margin: EdgeInsets.only(bottom: 1.h),
                                                                 height: 40.h,
                                                                 width: 78.w,
@@ -342,12 +357,25 @@ class _homeState extends State<home> {
                                                                         226,
                                                                         163,
                                                                         1.0),
-                                                                    borderRadius: BorderRadius.all(Radius.circular(10))
+                                                                    boxShadow: [
+                                                                      BoxShadow(
+                                                                          color: Colors.grey,
+                                                                          offset: const Offset(
+                                                                              1.0,
+                                                                              5.0
+                                                                          ),
+                                                                          blurRadius: 10.0,
+                                                                          spreadRadius:2.0
+                                                                      ),
+                                                                    ]
                                                                 ),
                                                                 child: Padding(
                                                                   padding:  EdgeInsets.all(1.w),
                                                                   child: Column(
                                                                     children: [
+                                                                      SizedBox(
+                                                                        height: 2.h,
+                                                                      ),
                                                                       Align(
                                                                         alignment: Alignment.topLeft,
                                                                         child: Text(
@@ -360,7 +388,7 @@ class _homeState extends State<home> {
                                                                           ),
                                                                         ),
                                                                       ),
-                                                                      SizedBox(height: 2.h),
+                                                                      SizedBox(height: 4.h),
                                                                       Row(
                                                                         mainAxisAlignment: MainAxisAlignment.center,
                                                                         children: [
@@ -430,7 +458,7 @@ class _homeState extends State<home> {
                                                                         ]
                                                                       ),
                                                                       SizedBox(
-                                                                        height: 1.5.h,
+                                                                        height: 4.h,
                                                                       ),
                                                                       Align(
                                                                         alignment: Alignment.centerLeft,
@@ -447,8 +475,11 @@ class _homeState extends State<home> {
                                                                     ],
                                                                   ),
                                                                 ),
+                                                            ),
                                                               ),
-                                                                Container(
+                                                              Padding(
+                                                                padding: EdgeInsets.all(1.w),
+                                                                child: Container(
                                                                 margin: EdgeInsets.only(bottom: 1.h),
                                                                 height: 40.h,
                                                                 width: 78.w,
@@ -458,12 +489,24 @@ class _homeState extends State<home> {
                                                                         226,
                                                                         163,
                                                                         1.0),
-                                                                    borderRadius: BorderRadius.all(Radius.circular(10))
+                                                                    boxShadow: [
+                                                                      BoxShadow(
+                                                                          color: Colors.grey,
+                                                                          offset: const Offset(
+                                                                              1.0,
+                                                                              5.0
+                                                                          ),
+                                                                          blurRadius: 10.0,
+                                                                          spreadRadius:2.0
+                                                                      ),
+                                                                    ]
+
                                                                 ),
                                                                 child: Padding(
                                                                   padding:  EdgeInsets.all(1.w),
                                                                   child: Column(
                                                                     children: [
+                                                                      SizedBox(height: 2.h),
                                                                       Align(
                                                                         alignment: Alignment.topLeft,
                                                                         child: Text(
@@ -476,7 +519,7 @@ class _homeState extends State<home> {
                                                                           ),
                                                                         ),
                                                                       ),
-                                                                      SizedBox(height: 2.h),
+                                                                      SizedBox(height: 4.h),
                                                                       Row(
                                                                           mainAxisAlignment: MainAxisAlignment.center,
                                                                           children: [
@@ -531,7 +574,7 @@ class _homeState extends State<home> {
                                                                                           width: 25.w,
                                                                                           child:Center(
                                                                                             child: Text(
-                                                                                              'Scan Image',
+                                                                                              'Next',
                                                                                               textAlign: TextAlign.center,
                                                                                               style: TextStyle(
                                                                                                 color: Color.fromRGBO(3, 135, 96, 1.0),
@@ -556,12 +599,12 @@ class _homeState extends State<home> {
                                                                           ]
                                                                       ),
                                                                       SizedBox(
-                                                                        height: 1.5.h,
+                                                                        height: 4.h,
                                                                       ),
                                                                       Align(
                                                                         alignment: Alignment.centerLeft,
                                                                         child: Text(
-                                                                          'If not sure of the selected image, or the selected image is a mistake, you can always clear the image field and select again. If the selected image is the desired image for scanning, tap on the Scan Image button.',
+                                                                          'If not sure of the selected image, or the selected image is a mistake, you can always clear the image field and select again. If the selected image is the desired image for scanning, tap on the Next button.',
                                                                           style: TextStyle(
                                                                             color: Colors.white,
                                                                             fontSize: 11.sp,
@@ -573,8 +616,11 @@ class _homeState extends State<home> {
                                                                     ],
                                                                   ),
                                                                 ),
+                                                            ),
                                                               ),
-                                                                Container(
+                                                              Padding(
+                                                              padding: EdgeInsets.all(1.w),
+                                                              child: Container(
                                                                 margin: EdgeInsets.only(bottom: 1.h),
                                                                 height: 40.h,
                                                                 width: 78.w,
@@ -584,12 +630,25 @@ class _homeState extends State<home> {
                                                                         226,
                                                                         163,
                                                                         1.0),
-                                                                    borderRadius: BorderRadius.all(Radius.circular(10))
+                                                                    boxShadow: [
+                                                                      BoxShadow(
+                                                                          color: Colors.grey,
+                                                                          offset: const Offset(
+                                                                              1.0,
+                                                                              5.0
+                                                                          ),
+                                                                          blurRadius: 10.0,
+                                                                          spreadRadius:2.0
+                                                                      ),
+                                                                    ]
                                                                 ),
                                                                 child: Padding(
                                                                   padding:  EdgeInsets.all(1.w),
                                                                   child: Column(
                                                                     children: [
+                                                                      SizedBox(
+                                                                        height: 2.h,
+                                                                      ),
                                                                       Align(
                                                                         alignment: Alignment.topLeft,
                                                                         child: Text(
@@ -602,9 +661,177 @@ class _homeState extends State<home> {
                                                                           ),
                                                                         ),
                                                                       ),
+                                                                      SizedBox(height: 2.h),
+                                                                      Row(
+                                                                          mainAxisAlignment: MainAxisAlignment.center,
+                                                                          children: [
+                                                                            Column(
+                                                                              children: [
+                                                                                Container(
+                                                                                    decoration: BoxDecoration(
+                                                                                        color: Colors.white,
+                                                                                        borderRadius: BorderRadius.all(Radius.circular(10))
+                                                                                    ),
+                                                                                    child: Padding(
+                                                                                      padding: EdgeInsets.all(1.w),
+                                                                                      child: Container(
+                                                                                        height: 6.h,
+                                                                                        width: 15.w,
+                                                                                        decoration: BoxDecoration(
+                                                                                            image: DecorationImage(
+                                                                                                image: AssetImage('assets/phil.png'),
+                                                                                                fit: BoxFit.fill
+                                                                                            )
+                                                                                        ),
+                                                                                      ),
+                                                                                    )
+                                                                                ),
+                                                                                SizedBox(height: 1.h),
+                                                                                Text('Philippine Model',
+                                                                                  style: TextStyle(
+                                                                                    color: Colors.black,
+                                                                                    fontFamily: 'Montserrat',
+                                                                                  ),
+                                                                                  textAlign: TextAlign.center,
+                                                                                )
+                                                                              ],
+                                                                            ),
+                                                                            SizedBox(width: 1.w),
+                                                                            Column(
+                                                                              children: [
+                                                                                Container(
+                                                                                    decoration: BoxDecoration(
+                                                                                        color: Colors.white,
+                                                                                        borderRadius: BorderRadius.all(Radius.circular(10))
+                                                                                    ),
+                                                                                    child: Padding(
+                                                                                      padding: EdgeInsets.all(1.w),
+                                                                                      child: Container(
+                                                                                        height: 6.h,
+                                                                                        width: 15.w,
+                                                                                        child: Center(
+                                                                                          child: Text(
+                                                                                            'K',
+                                                                                            textAlign: TextAlign.center,
+                                                                                            style: TextStyle(
+                                                                                                color: Color.fromRGBO(3, 135, 96, 1.0),
+                                                                                                fontSize: 20.sp,
+                                                                                                fontFamily: 'Montserrat',
+                                                                                                fontWeight: FontWeight.w700
+                                                                                            ),
+                                                                                          ),
+                                                                                        ),
+                                                                                      ),
+                                                                                    )
+                                                                                ),
+                                                                                SizedBox(height: 1.h),
+                                                                                Text('Kaggle Model',
+                                                                                  style: TextStyle(
+                                                                                    color: Colors.black,
+                                                                                    fontFamily: 'Montserrat',
+                                                                                  ),
+                                                                                  textAlign: TextAlign.center,
+                                                                                )
+                                                                              ],
+                                                                            ),
+                                                                          ]
+                                                                      ),
+                                                                      SizedBox(width: 1.w),
+                                                                      Column(
+                                                                        children: [
+                                                                          Container(
+                                                                              decoration: BoxDecoration(
+                                                                                  color: Colors.white,
+                                                                                  borderRadius: BorderRadius.all(Radius.circular(10))
+                                                                              ),
+                                                                              child: Padding(
+                                                                                padding: EdgeInsets.all(1.w),
+                                                                                child: Container(
+                                                                                  height: 6.h,
+                                                                                  width: 15.w,
+                                                                                  decoration: BoxDecoration(
+                                                                                      image: DecorationImage(
+                                                                                          image: AssetImage('assets/scan.png'),
+                                                                                          fit: BoxFit.fill
+                                                                                      )
+                                                                                  ),
+                                                                                ),
+                                                                              )
+                                                                          ),
+                                                                          SizedBox(height: 1.h),
+                                                                          Text('Use both Model and Compare',
+                                                                            style: TextStyle(
+                                                                              color: Colors.black,
+                                                                              fontFamily: 'Montserrat',
+                                                                            ),
+                                                                            textAlign: TextAlign.center,
+                                                                          )
+                                                                        ],
+                                                                      ),
+                                                                      SizedBox(height: 2.h,),
+
+                                                                      Align(
+                                                                        alignment: Alignment.centerLeft,
+                                                                        child: Text(
+                                                                          'Choose model to use. These model are trained using collected images of rice leaf under the effects of rice diseases from Philippine and online sources.'
+                                                                              'Or run both model and compare result.',
+                                                                          style: TextStyle(
+                                                                            color: Colors.white,
+                                                                            fontSize: 11.sp,
+                                                                            fontFamily: 'Montserrat',
+                                                                          ),
+                                                                        ),
+                                                                      ),
+
+                                                                    ],
+                                                                  ),
+                                                                ),
+                                                              ),
+                                                            ),
+                                                              Padding(
+                                                                padding: EdgeInsets.all(1.w),
+                                                                child: Container(
+                                                                margin: EdgeInsets.only(bottom: 1.h),
+                                                                height: 40.h,
+                                                                width: 78.w,
+                                                                decoration: BoxDecoration(
+                                                                    color: Color.fromRGBO(
+                                                                        18,
+                                                                        226,
+                                                                        163,
+                                                                        1.0),
+                                                                    boxShadow: [
+                                                                      BoxShadow(
+                                                                          color: Colors.grey,
+                                                                          offset: const Offset(
+                                                                              1.0,
+                                                                              5.0
+                                                                          ),
+                                                                          blurRadius: 10.0,
+                                                                          spreadRadius:2.0
+                                                                      ),
+                                                                    ]
+                                                                ),
+                                                                child: Padding(
+                                                                  padding:  EdgeInsets.all(1.w),
+                                                                  child: Column(
+                                                                    children: [
+                                                                      SizedBox(height: 2.h),
+                                                                      Align(
+                                                                        alignment: Alignment.topLeft,
+                                                                        child: Text(
+                                                                          'Step 5:',
+                                                                          style: TextStyle(
+                                                                              color: Colors.white,
+                                                                              fontSize: 22.sp,
+                                                                              fontFamily: 'Montserrat',
+                                                                              fontWeight: FontWeight.w700
+                                                                          ),
+                                                                        ),
+                                                                      ),
                                                                       Center(
                                                                         child: Padding(
-                                                                          padding: EdgeInsets.only(top: 1.h),
+                                                                          padding: EdgeInsets.only(top: 4.h),
                                                                           child: Container(
                                                                             decoration: BoxDecoration(
                                                                                 color: Colors.white,
@@ -627,7 +854,7 @@ class _homeState extends State<home> {
                                                                         ),
                                                                       ),
                                                                       SizedBox(
-                                                                        height: 2.h,
+                                                                        height: 4.h,
                                                                       ),
                                                                       Align(
                                                                         alignment: Alignment.centerLeft,
@@ -635,7 +862,7 @@ class _homeState extends State<home> {
                                                                           'After classifying, it shows the top three diseases that has the highest confidence. Then you are given an option to scan again or return to homepage by tapping on the Done button.',
                                                                           style: TextStyle(
                                                                             color: Colors.white,
-                                                                            fontSize: 11.sp,
+                                                                            fontSize: 12.sp,
                                                                             fontFamily: 'Montserrat',
                                                                           ),
                                                                         ),
@@ -644,9 +871,9 @@ class _homeState extends State<home> {
                                                                     ],
                                                                   ),
                                                                 ),
-                                                              ),
-                                                            ],
                                                             ),
+                                                              ),
+                                                          ],
                                                           )
                                                 )
                                               ],

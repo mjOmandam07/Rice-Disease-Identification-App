@@ -22,7 +22,7 @@ class Classifier {
 
 
 
-  classifyImage(var image) async {
+  classifyImage(var image, var model, var label) async {
     print("classifier ran");
     var inputImage = File(image.path);
     img.Image imageInput = img.decodeImage(inputImage.readAsBytesSync())!;
@@ -30,7 +30,7 @@ class Classifier {
 
     try {
       interpreter = await Interpreter.fromAsset(
-          "model.tflite", options: InterpreterOptions());
+          "${model}", options: InterpreterOptions());
       _inputShape = interpreter
           .getInputTensor(0)
           .shape;
@@ -49,10 +49,10 @@ class Classifier {
           TensorProcessorBuilder().add(NormalizeOp(0, 255))
               .add(DequantizeOp(0, 1 / 255.0))
               .build();
-      print("input shape: ${_inputShape}\n"
+      print("\n\ninput shape: ${_inputShape}\n"
           "output shape: ${_outputShape}\n"
           "input type: ${_inputType}\n"
-          "output type: ${_outputType}");
+          "output type: ${_outputType}\n\n");
       print("Interpreter Loaded Successfully");
     } catch (e) {
       print('error loading or running model: ${e}');
@@ -80,7 +80,7 @@ class Classifier {
     }
 
 
-    List<String> labels = await FileUtil.loadLabels("assets/labels.txt");
+    List<String> labels = await FileUtil.loadLabels("assets/${label}");
     print('labels loaded');
 
     Map<String, double> labeledProb = TensorLabel.fromList(
@@ -88,7 +88,7 @@ class Classifier {
         .getMapWithFloatValue();
     var pred = getTopProbability(labeledProb);
 
-    print(pred);
+    // print(pred);
     interpreter.close();
     return pred;
 

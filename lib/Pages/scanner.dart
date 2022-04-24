@@ -27,7 +27,6 @@ class _scannerState extends State<scanner> {
   }
 
 
-
   @override
   Widget build(BuildContext context) {
     return Sizer(builder:(context, orientation, deviceType) {
@@ -229,12 +228,12 @@ class _scannerState extends State<scanner> {
                                   width: 50.w,
                                   child: ElevatedButton(
                                       onPressed: (){
-                                        print(imageFile);
+                                        print('Scanner img: ${imageFile}');
                                         Navigator.pushNamed(
                                             context,
-                                            '/analyze',
+                                            '/selectModel',
                                             arguments: {
-                                              'image': imageFile
+                                              'image': imageFile,
                                             });
                                       },
                                       style: ElevatedButton.styleFrom(
@@ -246,7 +245,7 @@ class _scannerState extends State<scanner> {
                                           )
                                       ),
                                       child: Text(
-                                        'Scan Image',
+                                        'Next',
                                         textAlign: TextAlign.center,
                                         style: TextStyle(
                                             color: Color.fromRGBO(3, 135, 96, 1.0),
