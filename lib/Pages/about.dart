@@ -2,7 +2,6 @@ import 'dart:ui';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:rice_disease_detection/Clipper/clipper.dart';
-import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:sizer/sizer.dart';
 
 class about extends StatefulWidget {
@@ -84,7 +83,7 @@ class _homeState extends State<about> {
                           height: 3.h
                         ),
                         RichText(text: TextSpan(
-                          text: 'Rice Disease Detection App',
+                          text: 'Rice Disease Identification App',
                           style: TextStyle(
                                     color: Colors.black,
                                     fontSize: 13.sp,
@@ -96,7 +95,7 @@ class _homeState extends State<about> {
                               text: ' is a mobile application that aims to help farmers'
                                     ' on their Rice Crops production yields through minimizing the risk of '
                                     'misinterpretation of diseases that are extremely the same in appearance that may lead to misuse of medication.'
-                                    '\n\nThe App features an image scanner that classifies different Rice Diseases using machine learning technologies,'
+                                    '\n\nThe App features an image scanner that identifies different Rice Diseases using machine learning technologies,'
                                     'it also features a library of the Rice Diseases that shows information about the disease. \n\n'
                                     'The app aims to provide user friendly assistance to the farmers that could somehow impact their Rice Disease Management.',
                               style: TextStyle(

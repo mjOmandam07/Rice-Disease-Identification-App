@@ -81,7 +81,7 @@ class _splashState extends State<splash> {
                   ],
                 ),
                 Text(
-                  'Rice Disease Detection App',
+                  'Rice Disease Identification App',
                   textAlign: TextAlign.center,
                   style: TextStyle(
                       color: Colors.white,
