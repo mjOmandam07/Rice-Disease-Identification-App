@@ -4,6 +4,8 @@ Various rice plant diseases negatively affect crop yield and food security. Earl
 
 Rice disease identification is a mobile application that aims to help farmers on their Rice Crops production yields through minimizing the risk of misinterpretation of diseases that are extremely the same in appearance that may lead to misuse of medication.The App features an image scanner that identifies different Rice Diseases using machine learning technologies, it also features a library of the Rice Diseases that shows information about the disease. The app aims to provide user friendly assistance to the farmers that could somehow impact their Rice Disease Management.
 
+Link to Apk file: https://drive.google.com/drive/folders/16kXOCG5Ot1UWaAqYdGxOx017PJ8XM-RS?usp=sharing
+
 
 <img src ="https://user-images.githubusercontent.com/60742948/176672081-69069ffa-d0b2-46e7-ba8b-6aba4b06d95b.jpg" width="200" height="400" /> <img src ="https://user-images.githubusercontent.com/60742948/176672750-45bb74dd-9d8a-4efc-8ae5-b452472f4bb1.jpg" width="200" height="400" />
 
